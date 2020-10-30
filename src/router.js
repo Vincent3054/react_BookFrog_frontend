@@ -2,6 +2,8 @@ import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import Index from "./routes/Index";
 import Demo from "./routes/Demo";
+import Booklist from "./routes/Booklist";
+
 
 
 export default (
@@ -9,6 +11,8 @@ export default (
         <Switch>
             <Route path="/" exact component={Index} />  {/* http://localhost:8000/#/ */}
             <Route path="/demo" exact component={Demo} /> {/* http://localhost:8000/#/demo */}
+            <Route path="/booklist" exact component={Booklist} /> {/* http://localhost:8000/#/booklist */}
+
         </Switch>
     </HashRouter>
 );
