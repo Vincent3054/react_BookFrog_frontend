@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
-import { Layout, Menu, Input, Select, List, Space } from 'antd';
+import { Layout, Menu, Input, Select, Typography  } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import "../mixin/main.css";
 import 'antd/dist/antd.css';
@@ -29,6 +29,12 @@ function handleChange(value) {
 }
 
 
+function handleTagChange(value) {
+    console.log(`selected ${value}`);
+}
+
+const { Title } = Typography;
+
 export default class BooklistLayout extends Component {
     state = {
         collapsed: false,
@@ -39,7 +45,7 @@ export default class BooklistLayout extends Component {
             collapsed: !this.state.collapsed,
         });
     };
- 
+
 
     render() {
         const { Header, Sider, Content } = Layout;
@@ -73,25 +79,24 @@ export default class BooklistLayout extends Component {
                         style={{
                             margin: '24px 16px',
                             padding: 24,
-                            height:100,
-                            
+                            height: 150,
                         }}
                     >
-                        <Select defaultValue="lucy" style={{ width: 200, marginRight: 20 }} onChange={handleChange} size="large"
+                        <Select defaultValue="lucy" style={{ width: "10%", marginRight: 20 }} onChange={handleChange} size="large"
                         >
                             <Option value="jack">書名</Option>
                             <Option value="lucy">作者</Option>
                             <Option value="Yiminghe">ISBN</Option>
                             <Option value="Yiminghe">分類號</Option>
                         </Select>
-                        <Select defaultValue="lucy" style={{ width: 200, marginRight: 20 }} onChange={handleChange} size="large"
+                        <Select defaultValue="lucy" style={{ width: "10%", marginRight: 20 }} onChange={handleChange} size="large"
                         >
                             <Option value="jack">所有館別</Option>
                             <Option value="lucy">臺北</Option>
                             <Option value="Yiminghe">臺中</Option>
                             <Option value="Yiminghe">臺南</Option>
                         </Select>
-                        <Select defaultValue="lucy" style={{ width: 300, marginRight: 20 }} onChange={handleChange} size="large"
+                        <Select defaultValue="lucy" style={{ width: "20%", marginRight: 20 }} onChange={handleChange} size="large"
                         >
                             <Option value="jack">依出版年排序(由大到小)</Option>
                             <Option value="lucy">依出版年排序(由小到大)</Option>
@@ -99,18 +104,38 @@ export default class BooklistLayout extends Component {
                             <Option value="Yiminghe">依書名年排序(由小到大)</Option>
                         </Select>
                         <Search
-                            placeholder="input search text"
+                            placeholder="請輸入搜尋內容"
                             enterButton="Search"
                             size="large"
                             suffix={suffix}
                             onSearch={onSearch}
-                            style={{ width: 850 }}
+                            style={{ width: '55%' }}
                         />
+                        <br></br>
+                        <span style={{fontSize:16}}>標籤：</span>
+                        <Select
+                            mode="multiple"
+                            allowClear
+                            style={{ width: '96%',margin: '24px 0px 0px 16px' }}
+                            placeholder="Please select"
+                            defaultValue={['蕨類']}
+                            onChange={handleTagChange}
+                            size="large"
+                        >
+                            <Option key={"蕨類"}>蕨類</Option>
+                            <Option key={"古埃及"}>古埃及</Option>
+                            <Option key={"金字塔"}>金字塔</Option>
+                            <Option key={"火山地形"}>火山地形</Option>
+                            <Option key={"地震帶"}>地震帶</Option>                                                    
+                            <Option key={"酸鹼"}>酸鹼</Option>                                                    
+                            <Option key={"維管素"}>維管素</Option>                                                    
+                            <Option key={"植物"}>植物</Option>                                                    
+                        </Select>
                     </Content>
                     <Content
                         className="site-layout-background"
                         style={{
-                            margin: '24px 16px',
+                            margin: '0px 16px 16px 16px',
                             padding: 24,
                             minHeight: 280,
                         }}
