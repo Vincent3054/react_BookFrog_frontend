@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  --antd-wave-shadow-color: white;
+}
+.login_wrap {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #aad576;
+}
+.login_img {
+  margin-bottom: 4vh;
+}
+.ant-form-item-control-input-content {
+  display: flex;
+  justify-content: center;
+}
+.ant-form-item-control-input-content > .ant-btn {
+  background-color: #245501;
+  color: white;
+  border: none;
+}
+@media screen and (min-width: 900px) {
+  .login-form {
+    width: 25vw;
+  }
+}
+
+.login_form_btn:hover {
+  background-color: #d8ebc1;
+  color: #245501;
+}
+.login_form_btn::selection {
+  background: #245501;
+  border: none;
+  color: white;
+  outline: 0 !important;
+}
+::selection {
+  outline: none;
+  background: white;
+}
+#components-form-demo-normal-login .login-form {
+  max-width: 1000px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}

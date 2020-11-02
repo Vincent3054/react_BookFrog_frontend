@@ -1,0 +1,10 @@
+.myclass_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #d8ebc1;
+  color: #245501;
+  border-radius: 1vh;
+}

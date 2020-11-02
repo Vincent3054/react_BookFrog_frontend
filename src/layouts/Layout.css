@@ -1,21 +1,54 @@
 .trigger {
-    font-size: 18px;
-    line-height: 64px;
-    padding: 0 24px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .trigger:hover {
-    color: #1890ff;
-  }
-  
-  .logo {
-    height: 32px;
-    background: rgba(255, 255, 255, 0.3);
-    margin: 16px;
-  }
-  
-  .site-layout .site-layout-background {
-    background: #fff;
-  }
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #245501;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+}
+.logo_img {
+  margin-right: 0.5vw;
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
+/*side*/
+.ant-layout-sider-children {
+  background-color: #73a942;
+}
+/*menu*/
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background-color: #73a942;
+  font-size: large;
+}
+/*選擇*/
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #245501;
+}
+/*header*/
+.layout_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*登出*/
+.ant-btn-link {
+  color: #245501;
+  font-size: 20px;
+}
