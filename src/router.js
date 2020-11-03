@@ -4,6 +4,7 @@ import Index from "./routes/Index";
 import Demo from "./routes/Demo";
 import Booklist from "./routes/Booklist";
 import Book from "./routes/Book";
+import Portfolio from "./routes/Portfolio";
 
 
 
@@ -15,8 +16,7 @@ export default (
             <Route path="/demo" exact component={Demo} /> {/* http://localhost:8000/#/demo */}
             <Route path="/booklist" exact component={Booklist} /> {/* http://localhost:8000/#/booklist */}
             <Route path="/book" exact component={Book} /> {/* http://localhost:8000/#/book */}
-
-
+            <Route path="/portfolio" exact component={Portfolio} /> {/* http://localhost:8000/#/portfolio */}
         </Switch>
     </HashRouter>
 );

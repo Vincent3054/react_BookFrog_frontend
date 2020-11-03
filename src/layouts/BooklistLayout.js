@@ -116,7 +116,7 @@ export default class BooklistLayout extends Component {
                         <Select
                             mode="multiple"
                             allowClear
-                            style={{ width: '96%',margin: '24px 0px 0px 16px' }}
+                            style={{ width: '95%',margin: '24px 0px 0px 16px' }}
                             placeholder="Please select"
                             defaultValue={['蕨類']}
                             onChange={handleTagChange}
