@@ -16,12 +16,15 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 24px;
+  font-size: x-large;
   color: #fff;
   font-weight: bold;
 }
 .logo_img {
   margin-right: 0.5vw;
+}
+.logo_img_closs {
+  margin-left: 0.6vw;
 }
 .site-layout .site-layout-background {
   background: #fff;

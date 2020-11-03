@@ -2,9 +2,78 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: x-large;
   font-weight: bold;
   background-color: #d8ebc1;
   color: #245501;
   border-radius: 1vh;
+  height: 20vh;
+}
+.tag_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #245501;
+  color: #d8ebc1;
+  border-radius: 1vh;
+}
+.class_list .ant-spin-nested-loading {
+  height: 75vh;
+}
+/*page*/
+.ant-pagination-item-active a {
+  color: #245501;
+}
+.ant-pagination-item-active a:focus,
+.ant-pagination-item-active a:hover {
+  color: #73a942;
+}
+.ant-pagination-item-active {
+  border-color: #245501;
+}
+.ant-pagination-item-active:focus,
+.ant-pagination-item-active:hover {
+  border-color: #73a942;
+}
+/*Model*/
+.ant-modal-title {
+  color: #245501;
+  font-size: x-large;
+  font-weight: bold;
+}
+.ant-modal-body {
+  padding: 0;
+}
+/*Table*/
+.ant-table-thead > tr > th {
+  text-align: center;
+  background: #73a942;
+  font-size: x-large;
+  color: white;
+}
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.ant-table tfoot > tr > th,
+.ant-table tfoot > tr > td {
+  padding: 12px;
+}
+.ant-table-tbody > tr > td {
+  font-size: large;
+}
+.ant-table-tbody > tr > td:first-child {
+  text-align: center;
+}
+.content_a {
+  color: #245501;
+}
+.content_a:hover {
+  color: #73a942;
+}
+.ant-table-pagination-right {
+  padding: 0 10px;
+}
+.tag_font {
+  font-size: medium;
 }

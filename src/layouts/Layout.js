@@ -27,6 +27,8 @@ export default class SiderDemo extends Component {
   render() {
     const { Header, Sider, Content } = Layout;
     const { children } = this.props;
+    const { collapsed } = this.state;
+    const span = collapsed ? <span></span> : <span>旅行書蛙</span>;
     return (
       <Layout style={{ minHeight: "100vh" }}>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
@@ -34,25 +36,19 @@ export default class SiderDemo extends Component {
             <Avatar
               size={{ xs: 24, sm: 24, md: 32, lg: 32, xl: 32, xxl: 32 }}
               src={img}
-              className="logo_img"
+              className={collapsed?"logo_img_closs":"logo_img"}
             />
-            旅行書蛙
+            {span}
           </div>
-          <Menu theme="dark" mode="inline" >
-            <Menu.Item
-              key="1"
-              icon={<AppstoreOutlined />}
-            >
-            <Link to="Demo">主題</Link>
+          <Menu theme="dark" mode="inline">
+            <Menu.Item key="1" icon={<AppstoreOutlined />}>
+              <Link to="/Subject">主題</Link>
             </Menu.Item>
-            <Menu.Item
-              key="2"
-              icon={<UserOutlined />}
-            >
-              <Link to="Myclass">我的班級</Link>
+            <Menu.Item key="2" icon={<UserOutlined />} >
+              <Link to="/Myclass">我的班級</Link>
             </Menu.Item>
-            <Menu.Item key="3" icon={<UnorderedListOutlined />} link>
-            <Link to="Record">學習歷程</Link>
+            <Menu.Item key="3" icon={<UnorderedListOutlined />} >
+              <Link to="/Record">學習歷程</Link>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -75,8 +71,8 @@ export default class SiderDemo extends Component {
           <Content
             className="site-layout-background"
             style={{
-              margin: "24px 16px",
-              padding: 24,
+              margin: "16px",
+              padding: "12px 24px",
               minHeight: 280,
             }}
           >
