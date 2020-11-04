@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Layout from "../layouts/BooklistLayout";
 import "../mixin/main.css";
-import { Input, Select, List, Pagination, Space, Row, Col, Divider, Typography, Anchor } from 'antd';
-import { AudioOutlined } from '@ant-design/icons';
-import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
+import { Pagination, Space, Row, Col, Divider, Typography } from 'antd';
+import { MessageOutlined, StarOutlined, LineChartOutlined } from '@ant-design/icons';
 import imgL001 from '../Assets/L001.jpg';
 import imgL002 from '../Assets/L002.jpg';
 import imgL003 from '../Assets/L003.jpg';
@@ -13,21 +12,7 @@ import imgL005 from '../Assets/L005.jpg';
 import imgL006 from '../Assets/L006.jpg';
 import imgL007 from '../Assets/L007.jpg';
 
-const { Search } = Input;
-const suffix = (
-    <AudioOutlined
-        style={{
-            fontSize: 16,
-            color: '#1890ff',
-        }}
-    />
-);
-const onSearch = value => console.log(value);
-
-const { Option } = Select;
-function handleChange(value) {
-    console.log(`selected ${value}`);
-}
+const { Text, Title } = Typography;
 
 const listData = [];
 for (let i = 0; i < 23; i++) {
@@ -48,52 +33,28 @@ const IconText = ({ icon, text }) => (
         {text}
     </Space>
 );
-const data = [
-    {
-        title: 'Ant Design Title 1',
-        img: 'https://im1.book.com.tw/image/getImage?i=https://www.books.com.tw/img/001/087/48/0010874830.jpg&v=5f96a52c&w=348&h=348'
-    },
-    {
-        title: 'Ant Design Title 2',
-    },
-    {
-        title: 'Ant Design Title 3',
-    },
-    {
-        title: 'Ant Design Title 4',
-    },
-];
-const { Link } = Anchor;
-
-const { Title } = Typography;
-const { Text, } = Typography;
-const { Paragraph } = Typography;
-function onChange(pageNumber) {
-    console.log('Page: ', pageNumber);
-}
 
 export default class Booklist extends Component {
     render() {
-
         return (
             <Layout>
                 <Row>
                     <Col flex="300px">
-                        <img width={300} src={imgL001}></img>
+                        <Link to="Book"><img width={300} src={imgL001}></img></Link>
                         <div style={{ margin: '10px 0px 5px 60px' }}>
-                            <IconText icon={StarOutlined} text="3" key="list-vertical-star-o" />　|　
-                            <IconText icon={LikeOutlined} text="16" key="list-vertical-like-o" />　|　
-                            <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />
+                            <IconText icon={StarOutlined} text="7.6" key="list-vertical-star-o" />　|　
+                            <IconText icon={LineChartOutlined} text="16" key="list-vertical-like-o" />　|　
+                            <IconText icon={MessageOutlined} text="4" key="list-vertical-message" />
                         </div>
                     </Col>
                     <Col flex="auto">
-                        <Title level={4}><u>蕨類觀察入門</u></Title>
+                        <Title level={4}><u> <Link to="Book">蕨類觀察入門</Link></u></Title>
                         <p style={{ marginBottom: '5px' }}><Text type="secondary">中文書 , 郭城孟   黃崑謀 , 遠流 , 出版日期: 2020-01-15</Text></p>
                         <p><Text code>　植物　</Text><Text code>　蕨類　</Text><Text code>　自然　</Text><Text code>　觀察家　</Text></p>
                         <p style={{ marginBottom: '5px' }}><Text>★深入淺出、明晰漸進的精美圖解式指南，吸引一般讀者與自然科學愛好者。 ◎台灣第一部本土自製蕨類百科，</Text></p>
                         <p style={{ marginBottom: '5px' }}><Text>歷久彌新全方位蕨類入門。 ◎近40幅細緻蕨類博物畫，數十幅精密解說小圖，加上約五百張生態與特徵照，多角</Text></p>
                         <p style={{ marginBottom: '5px' }}><Text>度呈現蕨類之美。◎豐富的延伸資訊與生活化的取材，是認識台灣植物生態地景不可或缺的科普讀物。◎蕨類專家、</Text></p>
-                        <p style={{ marginBottom: '5px' }}><Text>優秀生態畫家、金獎編輯團......more</Text></p>
+                        <p style={{ marginBottom: '5px' }}><Text>優秀生態畫家、金獎編輯團......<Link to="Book">more</Link></Text></p>
                     </Col>
                 </Row>
                 <Divider />
@@ -101,8 +62,8 @@ export default class Booklist extends Component {
                     <Col flex="300px">
                         <img width={300} src={imgL002}></img>
                         <div style={{ margin: '10px 0px 5px 60px' }}>
-                            <IconText icon={StarOutlined} text="0" key="list-vertical-star-o" />　|　
-                            <IconText icon={LikeOutlined} text="8" key="list-vertical-like-o" />　|　
+                            <IconText icon={StarOutlined} text="5.2" key="list-vertical-star-o" />　|　
+                            <IconText icon={LineChartOutlined} text="8" key="list-vertical-like-o" />　|　
                             <IconText icon={MessageOutlined} text="1" key="list-vertical-message" />
                         </div>
                     </Col>
@@ -119,8 +80,8 @@ export default class Booklist extends Component {
                     <Col flex="300px" >
                         <img width={300} src={imgL003}></img>
                         <div style={{ margin: '10px 0px 5px 60px' }}>
-                            <IconText icon={StarOutlined} text="1" key="list-vertical-star-o" />　|　
-                            <IconText icon={LikeOutlined} text="6" key="list-vertical-like-o" />　|　
+                            <IconText icon={StarOutlined} text="3.7" key="list-vertical-star-o" />　|　
+                            <IconText icon={LineChartOutlined} text="6" key="list-vertical-like-o" />　|　
                             <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />
                         </div>
                     </Col>
@@ -140,8 +101,8 @@ export default class Booklist extends Component {
                     <Col flex="300px">
                         <img width={300} src={imgL004}></img>
                         <div style={{ margin: '10px 0px 5px 60px' }}>
-                            <IconText icon={StarOutlined} text="2" key="list-vertical-star-o" />　|　
-                            <IconText icon={LikeOutlined} text="1" key="list-vertical-like-o" />　|　
+                            <IconText icon={StarOutlined} text="3.4" key="list-vertical-star-o" />　|　
+                            <IconText icon={LineChartOutlined} text="1" key="list-vertical-like-o" />　|　
                             <IconText icon={MessageOutlined} text="0" key="list-vertical-message" />
                         </div>
                     </Col>
@@ -158,8 +119,8 @@ export default class Booklist extends Component {
                     <Col flex="300px">
                         <img width={300} src={imgL005}></img>
                         <div style={{ margin: '10px 0px 5px 60px' }}>
-                            <IconText icon={StarOutlined} text="1" key="list-vertical-star-o" />　|　
-                            <IconText icon={LikeOutlined} text="1" key="list-vertical-like-o" />　|　
+                            <IconText icon={StarOutlined} text="2.9" key="list-vertical-star-o" />　|　
+                            <IconText icon={LineChartOutlined} text="1" key="list-vertical-like-o" />　|　
                             <IconText icon={MessageOutlined} text="0" key="list-vertical-message" />
                         </div>
                     </Col>
@@ -176,8 +137,8 @@ export default class Booklist extends Component {
                     <Col flex="300px">
                         <img width={300} src={imgL006}></img>
                         <div style={{ margin: '10px 0px 5px 60px' }}>
-                            <IconText icon={StarOutlined} text="1" key="list-vertical-star-o" />　|　
-                            <IconText icon={LikeOutlined} text="1" key="list-vertical-like-o" />　|　
+                            <IconText icon={StarOutlined} text="2.1" key="list-vertical-star-o" />　|　
+                            <IconText icon={LineChartOutlined} text="1" key="list-vertical-like-o" />　|　
                             <IconText icon={MessageOutlined} text="0" key="list-vertical-message" />
                         </div>
                     </Col>
@@ -196,8 +157,8 @@ export default class Booklist extends Component {
                     <Col flex="300px">
                         <img width={300} src={imgL007}></img>
                         <div style={{ margin: '10px 0px 5px 60px' }}>
-                            <IconText icon={StarOutlined} text="1" key="list-vertical-star-o" />　|　
-                            <IconText icon={LikeOutlined} text="1" key="list-vertical-like-o" />　|　
+                            <IconText icon={StarOutlined} text="1.7" key="list-vertical-star-o" />　|　
+                            <IconText icon={LineChartOutlined} text="1" key="list-vertical-like-o" />　|　
                             <IconText icon={MessageOutlined} text="0" key="list-vertical-message" />
                         </div>
                     </Col>
@@ -216,36 +177,3 @@ export default class Booklist extends Component {
         )
     }
 }
-/*
-    蕨類觀察入門
-                        <p style={{marginBottom: '5px'}}><Text >ISBN：9789573245018 </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>作者：<u>郭城孟</u></Text></p>
-                        <p style={{marginBottom: '5px'}}> <Text>繪者：<u>黃崑謀</u> </Text></p>
-                        <p style={{marginBottom: '5px'}}> <Text>出版社：<u>遠流</u> </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>出版日期：2020/01/15 </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>語言：繁體中文 </Text></p>
-*/
-/*
-柴山蕨類植物
-                        <p style={{marginBottom: '5px'}}><Text > ISBN：9789860244762 </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>作者：<u>楊吉壽</u></Text></p>
-                        <p style={{marginBottom: '5px'}}> <Text>出版社：<u>高雄市政府研究發展考核委員會</u> </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>出版日期：2010/08/01 </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>語言：繁體中文 </Text></p>
-*/
-/*
-蕨妙草山
-                        <p style={{marginBottom: '5px'}}><Text > ISBN：9789860304268</Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>作者：<u>陽明山國家公園管理處</u></Text></p>
-                        <p style={{marginBottom: '5px'}}> <Text>出版社：<u>內政部營建署陽明山國家公園管理處  </u> </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>出版日期：2011/12/01 </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>語言：繁體中文 </Text></p>
-*/
-/*
-蕨影：大雪山國家森林遊樂區蕨類植物解說手冊
-                        <p style={{marginBottom: '5px'}}><Text > ISBN：9789860199987 </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>作者：<u>郭城孟、黃俊溢、高美芳</u></Text></p>
-                        <p style={{marginBottom: '5px'}}> <Text>出版社：<u>行政院農業委員會林務局  </u> </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>出版日期：2011/10/01 </Text></p>
-                        <p style={{marginBottom: '5px'}}><Text>語言：繁體中文 </Text></p>
-*/

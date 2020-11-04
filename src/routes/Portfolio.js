@@ -10,6 +10,9 @@ import imgL001 from '../Assets/L001.jpg';
 import imgS005 from '../Assets/S005.jpg';
 import imgS006 from '../Assets/S006.jpg';
 import imgS007 from '../Assets/S007.png';
+import imgS003 from '../Assets/S003.jpg';
+
+
 const { Title, Text } = Typography;
 const { Search, TextArea } = Input;
 const { Column, ColumnGroup } = Table;
@@ -94,6 +97,14 @@ const data = [
     },
     {
         key: '2',
+        img: imgS003,
+        name: '繽紛生命-生物多樣性特展',
+        status: '未填寫',
+        date: '2020-11-7',
+        tags: ['生命', '生物', '植物', '動物','自然'],
+    },
+    {
+        key: '3',
         img: imgS005,
         name: '現代國畫畫派 2020 現代國畫創作展',
         status: '已填寫',
@@ -101,7 +112,7 @@ const data = [
         tags: ['植物', '蕨類', '自然', '觀察家'],
     },
     {
-        key: '3',
+        key: '4',
         img: imgS006,
         name: '仿生-從大自然來的絶妙點子特展',
         status: '未填寫',
@@ -109,13 +120,14 @@ const data = [
         tags: ['植物', '蕨類', '自然', '觀察家'],
     },
     {
-        key: '4',
+        key: '5',
         img: imgS007,
         name: '仿生-從大自然來的絶妙點子特展',
         status: '未填寫',
         date: '2020-11-3',
         tags: ['植物', '蕨類', '自然', '觀察家'],
     },
+
 ];
 
 export default class Portfolio extends Component {
@@ -244,9 +256,9 @@ export default class Portfolio extends Component {
                                     <span>班級：</span>
                                 </Col>
                                 <Col span={12}>
-                                    <Input placeholder="" style={{ width: 190 ,marginRight: '5%' }} />
+                                    <Input placeholder="" style={{ width: 190, marginRight: '5%' }} />
                                     <span>學號：</span>
-                                    <Input placeholder="" style={{ width: 190 ,marginRight: '5%' }} />
+                                    <Input placeholder="" style={{ width: 190, marginRight: '5%' }} />
                                     <span>姓名：</span>
                                     <Input placeholder="" style={{ width: 190 }} />
                                 </Col>
@@ -257,7 +269,7 @@ export default class Portfolio extends Component {
                                     <span>標題：</span>
                                 </Col>
                                 <Col span={12}>
-                                    <Input placeholder=""  />
+                                    <Input placeholder="" />
                                 </Col>
                                 <Col span={6}></Col>
                             </Row >
