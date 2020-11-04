@@ -36,7 +36,7 @@ export default class Subject extends Component {
               xl: 6,
               xxl: 6,
             }}
-            pagination={<Pagination total={50} size="small" />}
+            footer={<Pagination total={filelist.length} pageSize={filelist.length} />}
             dataSource={filelist}
             renderItem={(item) => (
               <List.Item>

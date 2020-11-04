@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import { Layout, Menu, Avatar, Button } from "antd";
 import "../mixin/main.css";
 import "antd/dist/antd.css";
@@ -48,13 +47,10 @@ this.setState({
           </div>
           <Menu theme="dark" mode="inline" onClick={this.handleSelect} defaultSelectedKeys={[this.state.k]}>
             <Menu.Item key="1" icon={<AppstoreOutlined />} >
-              <Link to="/Subject">主題</Link>
+              <Link to="/Teacher">建立主題</Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<UserOutlined />} >
-              <Link to="/Myclass">我的班級</Link>
-            </Menu.Item>
-            <Menu.Item key="3" icon={<UnorderedListOutlined />} >
-              <Link to="/Record">學習歷程</Link>
+              <Link to="/Demo">學習歷程核對</Link>
             </Menu.Item>
           </Menu>
         </Sider>

@@ -1,0 +1,23 @@
+.add_content {
+  background: #aad576;
+  color: white;
+  border: none;
+  font-size: large;
+  margin: 10px 5px;
+}
+.add_content:hover {
+  background: white;
+  color: #aad576;
+  border: #aad576 solid 1px;
+}
+.add_content:visited,
+.add_content:focus,
+.add_content:active {
+  color: #aad576;
+}
+.del {
+  color: #245501;
+}
+.del:hover {
+  color: #aad576;
+}

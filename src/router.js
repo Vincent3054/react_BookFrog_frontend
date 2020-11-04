@@ -7,12 +7,16 @@ import Subject from "./routes/Subject";
 import Myclass from "./routes/Myclass";
 import Record from "./routes/Record";
 import Nature from "./routes/Nature";
+import Teacher from "./routes/Teacher";
 export default (
     <HashRouter>
         <Switch>
             <Route path="/" exact component={Index} />  {/* http://localhost:8000/#/ */}
             <Route path="/demo" exact component={Demo} /> {/* http://localhost:8000/#/demo */}
             <Route path="/Login" exact component={Login} />  {/* http://localhost:8000/#/Login */}
+            {/*老師*/}
+            <Route path="/Teacher" exact component={Teacher} />  {/* http://localhost:8000/#/Teacher */}
+            {/*學生*/}
             <Route path="/Subject" exact component={Subject} />  {/* http://localhost:8000/#/Subject */}
             <Route path="/Myclass" exact component={Myclass} />  {/* http://localhost:8000/#/Myclass */}
             <Route path="/Record" exact component={Record} />  {/* http://localhost:8000/#/Myclass */}

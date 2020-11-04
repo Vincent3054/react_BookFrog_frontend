@@ -12,6 +12,11 @@ export default class Login extends Component {
       password: "123456",
       remember: false,
     },
+    teach:{
+      username: "teacher000",
+      password: "123456",
+      remember: false,
+    },
     user_nm: "",
     user_pw: "",
     visible: false,
@@ -26,15 +31,21 @@ export default class Login extends Component {
     });
   };
   render() {
-    const { user, user_nm, user_pw } = this.state;
+    const { user,teach, user_nm, user_pw } = this.state;
     const NormalLoginForm = () => {
       const onFinish = (values) => {
         console.log("Received values of form: ", values);
         if (
-          values.username === user.username &&
-          values.password === user.password
+          (values.username === user.username &&
+          values.password === user.password)||(values.username === teach.username &&
+            values.password === teach.password)
         ) {
-          this.props.history.push("/Demo");
+          if(values.username === user.username){
+            this.props.history.push("/Subject");
+          }
+          else{
+            this.props.history.push("/Demo");
+          }
         } else {
           this.Warning();
         }

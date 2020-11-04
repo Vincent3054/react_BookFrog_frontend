@@ -1,0 +1,44 @@
+.add_wrap {
+  margin: 10px 0;
+  height: 5vh;
+}
+.teach_add {
+  width: 8vw;
+  height: 5vh;
+  font-size: large;
+  outline: 0;
+  color: #245501;
+  border: #245501 2px solid;
+  font-weight: bold;
+}
+.teach_add:hover {
+  color: #aad576;
+  border: #aad576 2px solid;
+  font-weight: bold;
+}
+.teach_span {
+  font-size: large;
+  font-weight: bold;
+  margin-right: 5px;
+}
+.teach_inp {
+  width: 12vw;
+  outline: 0;
+  font-size: large;
+}
+.teach_list .ant-spin-nested-loading {
+  height: 68vh;
+}
+.teach_card .ant-card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  background-color: #aad576;
+  color: white;
+  font-weight: bold;
+}
+.ant-card-actions > li > span a:not(.ant-btn):hover,
+.ant-card-actions > li > span > .anticon:hover {
+  color: #538d22;
+}

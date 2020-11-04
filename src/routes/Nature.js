@@ -8,18 +8,19 @@ import { Link } from "react-router-dom";
 export default class Subjects extends Component {
   state = {
     list: [
-      {title: "蕨類" },
-      {title: "真菌" },
-      {title: "動物" },
-      {title: "魚類" },
-      {title: "裸子" },
-      {title: "鳥類" },
-      {title: "藻類" },
-      {title: "原生動物" },
-      {title: "細菌" },
-      {title: "藍綠藻" },
-      {title: "哺乳類" },
-      {title: "化石" },
+      {title: "#植物" },
+      {title: "#蕨類" },
+      {title: "#真菌" },
+      {title: "#動物" },
+      {title: "#魚類" },
+      {title: "#裸子" },
+      {title: "#鳥類" },
+      {title: "#藻類" },
+      {title: "#原生動物" },
+      {title: "#細菌" },
+      {title: "#藍綠藻" },
+      {title: "#哺乳類" },
+      {title: "#化石" },
     ],
   };
   render() {
@@ -43,6 +44,7 @@ export default class Subjects extends Component {
               xl: 6,
               xxl: 6,
             }}
+            footer={<Pagination total={list.length} pageSize={list.length} />}
             dataSource={list}
             renderItem={(item) => (
               <List.Item>
