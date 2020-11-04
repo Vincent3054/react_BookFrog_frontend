@@ -48,7 +48,7 @@ export default class Subjects extends Component {
             dataSource={list}
             renderItem={(item) => (
               <List.Item>
-                <Link to="">
+                <Link to="/booklist">
                   <Card className="tag_card" hoverable="true">
                     {item.title}
                   </Card>

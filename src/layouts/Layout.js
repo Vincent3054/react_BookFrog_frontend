@@ -54,7 +54,7 @@ this.setState({
               <Link to="/Myclass">我的班級</Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<UnorderedListOutlined />} >
-              <Link to="/Record">學習歷程</Link>
+              <Link to="/portfolio">學習歷程</Link>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -71,7 +71,7 @@ this.setState({
               }
             )}
             <Button type="link" htmlType="submit" className="login_form_btn">
-              登出
+                <Link to="/Login">登出</Link>
             </Button>
           </Header>
           <Content

@@ -102,7 +102,7 @@ export default class Myclass extends Component {
               let cor = color[index];
               return (
                 <Tag color={cor} key={tag} className="tag_font">
-                  <Link to="/Demo">{tag}</Link>
+                  <Link to="/booklist">{tag}</Link>
                 </Tag>
               );
             })}

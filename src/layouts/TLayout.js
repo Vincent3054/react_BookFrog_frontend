@@ -50,7 +50,7 @@ this.setState({
               <Link to="/Teacher">建立主題</Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<UserOutlined />} >
-              <Link to="/Demo">學習歷程核對</Link>
+              <Link to="/drportfolio">學習歷程核對</Link>
             </Menu.Item>
           </Menu>
         </Sider>
@@ -67,7 +67,7 @@ this.setState({
               }
             )}
             <Button type="link" htmlType="submit" className="login_form_btn">
-              登出
+                <Link to="/Login">登出</Link>
             </Button>
           </Header>
           <Content
