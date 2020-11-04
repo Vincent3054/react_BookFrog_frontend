@@ -160,11 +160,11 @@ export default class Exhibition extends Component {
                             </Col>
                             <Col flex="200px" >
                                 <div class="w3-progress-container">
-                                    <div id="myBar" class="w3-progressbar" style={{ width: "60%" }}></div>
+                                    <div id="myBar" class="w3-progressbar" style={{ width: "80%" }}></div>
                                 </div>
                             </Col>
                             <Col flex="20px">
-                                70%
+                                80%
                             </Col>
                         </Row>
                         <Row style={{ marginBottom: '1%' }}>
@@ -173,11 +173,11 @@ export default class Exhibition extends Component {
                             </Col>
                             <Col flex="200px" >
                                 <div class="w3-progress-container">
-                                    <div id="myBar" class="w3-progressbar" style={{ width: "20%" }}></div>
+                                    <div id="myBar" class="w3-progressbar" style={{ width: "15%" }}></div>
                                 </div>
                             </Col>
                             <Col flex="20px" style={{ marginBottom: '1%' }}>
-                                20%
+                                15%
                             </Col>
                         </Row>
                         <Row style={{ marginBottom: '1%' }}>
@@ -186,11 +186,11 @@ export default class Exhibition extends Component {
                             </Col>
                             <Col flex="200px" >
                                 <div class="w3-progress-container">
-                                    <div id="myBar" class="w3-progressbar" style={{ width: "10%" }}></div>
+                                    <div id="myBar" class="w3-progressbar" style={{ width: "5%" }}></div>
                                 </div>
                             </Col>
                             <Col flex="20px" style={{ marginBottom: '1%' }}>
-                                10%
+                                5%
                             </Col>
                         </Row>
                         <Row style={{ marginBottom: '1%' }}>

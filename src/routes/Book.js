@@ -114,7 +114,7 @@ export default class Book extends Component {
                         <p style={{ marginBottom: '5px' }}><Text>語言：繁體中文 </Text></p>
                         <Button type="primary" icon={<DownloadOutlined />} size='large' onClick={this.showModal} style={{ marginLeft: '60%', marginTop: '5%' }} >
                             加入學習歷程
-                            </Button>
+                        </Button>
                         <Modal
                             visible={this.state.visible}
                             onOk={this.handleOk}

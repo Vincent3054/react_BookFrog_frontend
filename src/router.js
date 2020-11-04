@@ -7,6 +7,8 @@ import Book from "./routes/Book";
 import Portfolio from "./routes/Portfolio";
 import ExhibitionList from "./routes/ExhibitionList";
 import Exhibition from "./routes/Exhibition";
+import DRPortfolio from "./routes/DRPortfolio";
+import MAPIndex from "./routes/MAPIndex";
 
 export default (
     <HashRouter>
@@ -18,6 +20,9 @@ export default (
             <Route path="/exhibitionlist" exact component={ExhibitionList} /> {/* http://localhost:8000/#/exhibitionlist */}
             <Route path="/exhibition" exact component={Exhibition} /> {/* http://localhost:8000/#/exhibition */}
             <Route path="/portfolio" exact component={Portfolio} /> {/* http://localhost:8000/#/portfolio */}
+            <Route path="/drportfolio" exact component={DRPortfolio} /> {/* http://localhost:8000/#/drportfolio */}
+            <Route path="/mapindex" exact component={MAPIndex}/> {/* http://localhost:8000/#/mapindex */}
+
 
         </Switch>
     </HashRouter>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Layout from "../layouts/Layout";
 import "../mixin/main.css";
 import "./Portfolio.css";
-import { Input, Radio, Typography, Button, Row, Col, Table, Tag, Space, Modal } from 'antd';
+import { Input, Radio, Typography, Button, Row, Col, Table, Tag, Space, Modal, Result } from 'antd';
 import { AudioOutlined } from '@ant-design/icons';
 import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 import imgL001 from '../Assets/L001.jpg';
@@ -32,7 +32,7 @@ const data = [
         name: '繽紛生命-生物多樣性特展',
         status: '未填寫',
         date: '2020-11-7',
-        tags: ['生命', '生物', '植物', '動物','自然'],
+        tags: ['生命', '生物', '植物', '動物', '自然'],
     },
     {
         key: '3',
@@ -61,7 +61,7 @@ const data = [
 
 ];
 
-export default class Portfolio extends Component {
+export default class DRPortfolio extends Component {
     state = {
         size: 'all',
         visible: false,
@@ -97,7 +97,7 @@ export default class Portfolio extends Component {
             <Layout>
                 <Row>
                     <Col flex="300px">
-                        <Title level={2} >學習歷程(學生)</Title>
+                        <Title level={2} >學習歷程(老師)</Title>
                     </Col>
                     <Col flex="auto" style={{ textAlign: "right" }}>
                         <Radio.Group value={size} onChange={this.handleSizeChange} style={{ marginRight: "3%" }}>
@@ -140,10 +140,17 @@ export default class Portfolio extends Component {
                                 align='center'
                             />
                             <Column
-                                title="填寫狀態"
+                                title="檢視心得"
                                 dataIndex="status"
                                 key="status"
                                 align='center'
+                                render={(text, record) => (
+                                    <Space size="middle">
+                                        <Button >
+                                            檢視
+                                        </Button>
+                                    </Space>
+                                )}
                             />
                             <Column
                                 title="標籤"
@@ -161,12 +168,16 @@ export default class Portfolio extends Component {
                                 )}
                             />
                             <Column
-                                title=""
+                                title="審核"
                                 key="action"
+                                align='center'
                                 render={(text, record) => (
                                     <Space size="middle">
-                                        <Button type="primary" onClick={this.showModal}>
-                                            填寫心得
+                                        <Button >
+                                            退回
+                                        </Button>
+                                        <Button type="primary" onClick={this.showModal}  >
+                                            同意
                                         </Button>
 
                                     </Space>
@@ -174,72 +185,20 @@ export default class Portfolio extends Component {
                             />
                         </Table>
                         <Modal
-                            title="填寫心得"
                             visible={this.state.visible}
                             onOk={this.handleOk}
                             onCancel={this.handleCancel}
-                            width='80%'
-                            okText='送出'
-                            cancelText='取消'
+                            footer={[]}
+                            width={600}
+                            style={{ paddingBottom: 0 }}
                         >
-                            <Row align="middle" style={{ marginBottom: "1%" }} >
-                                <Col span={6} style={{ textAlign: "right" }}>
-                                    <span>班級：</span>
-                                </Col>
-                                <Col span={12}>
-                                    <Input placeholder="" style={{ width: 190, marginRight: '5%' }} />
-                                    <span>學號：</span>
-                                    <Input placeholder="" style={{ width: 190, marginRight: '5%' }} />
-                                    <span>姓名：</span>
-                                    <Input placeholder="" style={{ width: 190 }} />
-                                </Col>
-                                <Col span={6}></Col>
-                            </Row >
-                            <Row align="middle" style={{ marginBottom: "1%" }} >
-                                <Col span={6} style={{ textAlign: "right" }}>
-                                    <span>標題：</span>
-                                </Col>
-                                <Col span={12}>
-                                    <Input placeholder="" />
-                                </Col>
-                                <Col span={6}></Col>
-                            </Row >
-                            <Row align="top" style={{ marginBottom: "1%" }} >
-                                <Col span={6} style={{ textAlign: "right" }}>
-                                    <span>一、圖書作者與內容簡介：</span>
-                                </Col>
-                                <Col span={12}>
-                                    <TextArea rows={4} />
-                                </Col>
-                                <Col span={6}></Col>
-                            </Row >
-                            <Row align="top" style={{ marginBottom: "1%" }} >
-                                <Col span={6} style={{ textAlign: "right" }}>
-                                    <span>二、內容摘錄：</span>
-                                </Col>
-                                <Col span={12}>
-                                    <TextArea rows={8} />
-                                </Col>
-                                <Col span={6}></Col>
-                            </Row >
-                            <Row align="top" style={{ marginBottom: "1%" }} >
-                                <Col span={6} style={{ textAlign: "right" }}>
-                                    <span>三、我的觀點：</span>
-                                </Col>
-                                <Col span={12}>
-                                    <TextArea rows={12} />
-                                </Col>
-                                <Col span={6}></Col>
-                            </Row >
-                            <Row align="top" style={{ marginBottom: "1%" }} >
-                                <Col span={6} style={{ textAlign: "right" }}>
-                                    <span>四、討論議題：</span>
-                                </Col>
-                                <Col span={12}>
-                                    <TextArea rows={4} />
-                                </Col>
-                                <Col span={6}></Col>
-                            </Row >
+                            <Result
+                                status="success"
+                                title="恭喜您，審核通過！"
+                                extra={[
+                                    <Button key="buy" onClick={this.handleCancel}>關閉視窗</Button>,
+                                ]}
+                            />
                         </Modal>
                     </Col>
                 </Row>

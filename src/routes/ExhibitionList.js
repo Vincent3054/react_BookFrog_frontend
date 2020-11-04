@@ -41,7 +41,7 @@ export default class ExhibitionList extends Component {
                     <Col flex="300px" style={{ marginLeft: "3%" }} >
                         <Link to="Exhibition"><img width={200} src={imgS003}></img></Link>
                         <div style={{ margin: '10px 0px 5px 20px' }}>
-                            <IconText icon={StarOutlined} text="9.2" key="list-vertical-star-o" />　|
+                            <IconText icon={StarOutlined} text="9.5" key="list-vertical-star-o" />　|
                             <IconText icon={LineChartOutlined} text="76" key="list-vertical-like-o" />　|
                             <IconText icon={MessageOutlined} text="3" key="list-vertical-message" />
                         </div>
