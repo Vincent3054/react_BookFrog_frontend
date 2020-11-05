@@ -1,32 +1,33 @@
 .container {
-    padding: 40px;
-    background: #419be0;
-  }
-  
-  .slick-slide img {
-    margin: auto;
-  }
-  .slick-prev:before {
-    color: rgba(0, 0, 0, 0.85);
-    
-  }
-  .rateh1{
-    margin-bottom: 0.5em;
-    color: rgba(0, 0, 0, 0.85);
-    font-weight: 600;
-    font-size: 38px;
-    line-height: 1.23
-  }
-.w3-progress-container{
-    width: 100%;
-    height: 1.5em;
-    position: relative;
-    background-color: #f1f1f1;
+  padding: 40px;
+  background: #73a942;
 }
-.w3-progressbar{
-    background-color: #63D2DE;
-    height: 100%;
-    position: absolute;
-    line-height: inherit;
-    box-sizing: inherit;
+.ant-col > h4 > u > a:hover {
+  color: #73a942;
+}
+.slick-slide img {
+  margin: auto;
+}
+.slick-prev:before {
+  color: rgba(0, 0, 0, 0.85);
+}
+.rateh1 {
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 1.23;
+}
+.w3-progress-container {
+  width: 100%;
+  height: 1.5em;
+  position: relative;
+  background-color: #f1f1f1;
+}
+.w3-progressbar {
+  background-color: #63d2de;
+  height: 100%;
+  position: absolute;
+  line-height: inherit;
+  box-sizing: inherit;
 }

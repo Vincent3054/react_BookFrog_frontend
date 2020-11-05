@@ -113,7 +113,7 @@ export default class Tablelist extends Component {
         key: "4",
         week: "第四週",
         content: "植物界",
-        tags: ["#植物","#蘚苔", "#蕨類", "#裸子", "#單雙子葉"],
+        tags: ["#植物","#蘚苔", "#裸子", "#單雙子葉"],
       },
       {
         key: "5",
@@ -229,7 +229,7 @@ export default class Tablelist extends Component {
         dataIndex: "content",
         key: "content",
         editable: true,
-        width: 400,
+        width: 250,
       },
       {
         title: "Tags",
@@ -255,6 +255,7 @@ export default class Tablelist extends Component {
       {
         title: "操作",
         dataIndex: "operation",
+        width: 100,
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
             <Popconfirm
@@ -296,7 +297,6 @@ export default class Tablelist extends Component {
         <Table
           components={components}
           rowClassName={() => "editable-row"}
-          bordered
           dataSource={dataSource}
           columns={column}
         />

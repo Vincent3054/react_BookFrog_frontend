@@ -51,7 +51,19 @@
   align-items: center;
 }
 /*登出*/
-.ant-btn-link {
+.ant-btn-link,
+.ant-btn-link:visited {
   color: #245501;
-  font-size: 20px;
+  font-size: large;
+  border: #245501 solid 1px;
+  margin-right: 2.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.ant-btn-link:hover,
+.ant-btn-link:active {
+  background-color: #d8ebc1;
+  border-radius: 5px;
 }

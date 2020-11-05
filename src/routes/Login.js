@@ -44,7 +44,7 @@ export default class Login extends Component {
             this.props.history.push("/Subject");
           }
           else{
-            this.props.history.push("/Demo");
+            this.props.history.push("/Teacher");
           }
         } else {
           this.Warning();

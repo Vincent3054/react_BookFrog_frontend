@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import { Layout, Menu, Avatar, Button } from "antd";
 import "../mixin/main.css";
 import "antd/dist/antd.css";
@@ -11,6 +10,9 @@ import {
   UnorderedListOutlined,
   UserOutlined,
   AppstoreOutlined,
+  ReadOutlined,
+  EnvironmentOutlined,
+  PictureOutlined,
 } from "@ant-design/icons";
 import img from "../Assets/frog.png";
 
@@ -50,10 +52,19 @@ this.setState({
             <Menu.Item key="1" icon={<AppstoreOutlined />} >
               <Link to="/Subject">主題</Link>
             </Menu.Item>
-            <Menu.Item key="2" icon={<UserOutlined />} >
+            <Menu.Item key="2" icon={<ReadOutlined />} >
+              <Link to="/booklist">書籍查詢</Link>
+            </Menu.Item>
+            <Menu.Item key="3" icon={<PictureOutlined />} >
+              <Link to="/ExhibitionList">展覽查詢</Link>
+            </Menu.Item>
+            <Menu.Item key="4" icon={<UserOutlined />} >
               <Link to="/Myclass">我的班級</Link>
             </Menu.Item>
-            <Menu.Item key="3" icon={<UnorderedListOutlined />} >
+            <Menu.Item key="5" icon={<EnvironmentOutlined />} >
+              <Link to="/MAPIndex">附近資源</Link>
+            </Menu.Item>
+            <Menu.Item key="6" icon={<UnorderedListOutlined />} >
               <Link to="/portfolio">學習歷程</Link>
             </Menu.Item>
           </Menu>
@@ -71,7 +82,7 @@ this.setState({
               }
             )}
             <Button type="link" htmlType="submit" className="login_form_btn">
-                <Link to="/Login">登出</Link>
+                <Link to="/">登出</Link>
             </Button>
           </Header>
           <Content

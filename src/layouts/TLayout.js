@@ -7,16 +7,15 @@ import { Link } from "react-router-dom";
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  UnorderedListOutlined,
-  UserOutlined,
-  AppstoreOutlined,
+  FormOutlined,
+  FolderAddOutlined,
 } from "@ant-design/icons";
 import img from "../Assets/frog.png";
 
 export default class SiderDemo extends Component {
   state = {
     collapsed: false,
-    k:1,
+    k: 1,
   };
 
   toggle = () => {
@@ -24,11 +23,11 @@ export default class SiderDemo extends Component {
       collapsed: !this.state.collapsed,
     });
   };
-  handleSelect=(e)=>{
-this.setState({
-  k:e.key,
-})
-  }
+  handleSelect = (e) => {
+    this.setState({
+      k: e.key,
+    });
+  };
   render() {
     const { Header, Sider, Content } = Layout;
     const { children } = this.props;
@@ -41,15 +40,20 @@ this.setState({
             <Avatar
               size={{ xs: 24, sm: 24, md: 32, lg: 32, xl: 32, xxl: 32 }}
               src={img}
-              className={collapsed?"logo_img_closs":"logo_img"}
+              className={collapsed ? "logo_img_closs" : "logo_img"}
             />
             {span}
           </div>
-          <Menu theme="dark" mode="inline" onClick={this.handleSelect} defaultSelectedKeys={[this.state.k]}>
-            <Menu.Item key="1" icon={<AppstoreOutlined />} >
+          <Menu
+            theme="dark"
+            mode="inline"
+            onClick={this.handleSelect}
+            defaultSelectedKeys={[this.state.k]}
+          >
+            <Menu.Item key="1" icon={<FolderAddOutlined />}>
               <Link to="/Teacher">建立主題</Link>
             </Menu.Item>
-            <Menu.Item key="2" icon={<UserOutlined />} >
+            <Menu.Item key="2" icon={<FormOutlined />}>
               <Link to="/drportfolio">學習歷程核對</Link>
             </Menu.Item>
           </Menu>
@@ -67,7 +71,7 @@ this.setState({
               }
             )}
             <Button type="link" htmlType="submit" className="login_form_btn">
-                <Link to="/Login">登出</Link>
+              <Link to="/">登出</Link>
             </Button>
           </Header>
           <Content

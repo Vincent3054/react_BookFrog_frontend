@@ -12,7 +12,7 @@ import {
 } from "@ant-design/icons";
 export default class Teacher extends Component {
   state = {
-    tags: ["數學", "自然", "國文"],
+    tags: ["數學", "自然"],
     inputVisible: false,
     inputValue: "",
     tableVisible:false,
