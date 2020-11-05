@@ -74,7 +74,6 @@ export default class MAPIndex extends Component {
 
         return (
             <Layout>
-
                 <Row>
                     <Title level={3} style={{ marginLeft: '15%', marginRight: "15%" }}>鄰近展覽</Title>
                     <Col span={24} style={{ marginLeft: '15%', marginRight: "15%", marginBottom: "15%" }}>
