@@ -11,11 +11,11 @@ import 'braft-editor/dist/index.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import imgL001 from '../Assets/L001.jpg';
-import imgL002 from '../Assets/L002.jpg';
+import imgL008 from '../Assets/L008.jpg';
 import imgL003 from '../Assets/L003.jpg';
-import imgL004 from '../Assets/L004.jpg';
-import imgL005 from '../Assets/L005.jpg';
-import imgL006 from '../Assets/L006.jpg';
+import imgL009 from '../Assets/L009.jpg';
+import imgL010 from '../Assets/L0010.jpg';
+//import imgL006 from '../Assets/L006.jpg';
 import imgL007 from '../Assets/L007.jpg';
 import imgS003 from '../Assets/S003.jpg';
 
@@ -265,19 +265,19 @@ export default class Exhibition extends Component {
                                     <Link to="Book"><img height="300px" src={imgL001} /></Link>
                                 </div>
                                 <div>
-                                    <img height="300px" src={imgL002} />
-                                </div>
-                                <div>
                                     <img height="300px" src={imgL003} />
                                 </div>
                                 <div>
-                                    <img height="300px" src={imgL004} />
+                                    <img height="300px" src={imgL008} />
                                 </div>
                                 <div>
-                                    <img height="300px" src={imgL005} />
+                                    <img height="300px" src={imgL009} />
                                 </div>
                                 <div>
-                                    <img height="300px" src={imgL006} />
+                                    <img height="300px" src={imgL010} />
+                                </div>
+                                <div>
+                                    <img height="300px" src={imgL001} />
                                 </div>
                                 <div>
                                     <img height="300px" src={imgL007} />
