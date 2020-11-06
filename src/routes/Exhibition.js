@@ -25,19 +25,19 @@ const { Title, Text } = Typography;
 
 const data = [
     {
-        title: '非常有趣!',
+        title: '林承冠',
         img: 'https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png',
-        time: '2020-09-27 11:38:02'
+        time: '非常有趣!'
     },
     {
-        title: '這個展覽太棒了!',
+        title: '陳建成⭐⭐',
         img: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/8_avatar-512.png',
-        time: '2020-10-29 08:16:51'
+        time: '這個展覽太棒了!'
     },
     {
-        title: '有點無聊',
+        title: '廖啟倫⭐',
         img: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/11_avatar-512.png',
-        time: '2020-11-05 22:17:06'
+        time: '有點無聊'
     },
 ];
 
@@ -106,7 +106,7 @@ export default class Exhibition extends Component {
                     </Col>
                     <Col flex="550px" style={{ fontSize: '18pt' }} >
                         <Title level={2}><u>繽紛生命-生物多樣性特展</u>  </Title>
-                        <p><Text code>　生命　</Text><Text code>　生物　</Text><Text code>　植物　</Text><Text code>　動物　</Text><Text code>　自然　</Text></p>
+                        <p><Text code>　生命　</Text><Text code>　生物　</Text><Text code>　植物　</Text><Text code>　動物　</Text><Text code>　環境　</Text></p>
                         <p style={{ marginBottom: '5px' }}><Text >地區：臺中市 </Text></p>
                         <p style={{ marginBottom: '5px' }}><Text>地點：國立自然科學博物館</Text></p>
                         <p style={{ marginBottom: '5px' }}> <Text>展館：第四特展室 </Text></p>

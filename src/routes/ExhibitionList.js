@@ -49,7 +49,7 @@ export default class ExhibitionList extends Component {
                     <Col flex="auto">
                         <Link to="Exhibition"><Title level={4}><u>繽紛生命-生物多樣性特展</u></Title></Link>
                         <p style={{ marginBottom: '5px' }}><Text type="secondary">臺中市 , 國立自然科學博物館 , 第四特展室 , 展出日期: 2020-05-20 至 2021-03-21</Text></p>
-                        <p><Text code>　生命　</Text><Text code>　生物　</Text><Text code>　植物　</Text><Text code>　動物　</Text><Text code>　自然　</Text></p>
+                        <p><Text code>　生命　</Text><Text code>　生物　</Text><Text code>　植物　</Text><Text code>　動物　</Text><Text code>　環境　</Text></p>
                         <p style={{ marginBottom: '5px' }}><Text>生物始之於簡，繼之以變，現之於繁，呈之以美。生物卅多億年的演化，將地球打造成亮麗的行星，這裡也是所</Text></p>
                         <p style={{ marginBottom: '5px' }}><Text>有過去、現在和未來生物的家。我們沒有另一個行星家園，There is no Planet B。科博館在2020年世界地球</Text></p>
                         <p style={{ marginBottom: '5px' }}><Text>日五十周年推出「繽紛的生命」特展，以豐富的館藏精品和民間藝術創作，搭配臺灣在地或世界性的研究故事</Text></p>

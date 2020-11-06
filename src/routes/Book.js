@@ -14,29 +14,30 @@ import imgS001 from '../Assets/S001.jpg';
 import imgS002 from '../Assets/S002.jpg';
 import imgS003 from '../Assets/S003.jpg';
 import imgS004 from '../Assets/S004.jpg';
+import star from '../Assets/star.png';
 
 const { Title, Text } = Typography;
 
 const data = [
     {
-        title: '這本書我很喜歡!',
+        title: '陳建成⭐⭐⭐',
         img: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/8_avatar-512.png',
-        time: '2020-09-27 11:38:02'
+        time: '這本書我很喜歡!'
     },
     {
-        title: '圖片很多',
+        title: '林承冠',
         img: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/11_avatar-512.png',
-        time: '2020-10-29 08:16:51'
+        time: '圖片很多'
     },
     {
-        title: 'Good!! ',
+        title: '廖啟倫⭐',
         img: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/9_avatar-512.png',
-        time: '2020-11-03 19:34:21'
+        time: 'Good!!'
     },
     {
-        title: '看不懂QQ',
+        title: '王薇涵',
         img: 'https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png',
-        time: '2020-11-05 22:17:06'
+        time: '看不懂QQ '
     },
 ];
 
@@ -105,7 +106,7 @@ export default class Book extends Component {
                     </Col>
                     <Col flex="550px" style={{ fontSize: '18pt' }} >
                         <Title level={2}><u>蕨類觀察入門</u>  </Title>
-                        <p><Text code>　植物　</Text><Link to="BookList"><Text code>　蕨類　</Text></Link><Text code>　自然　</Text><Text code>　觀察家　</Text></p>
+                        <p><Text code>　植物　</Text><Link to="BookList"><Text code>　蕨類　</Text></Link><Text code>　觀察家　</Text><Text code>　入門　</Text></p>
                         <p style={{ marginBottom: '5px' }}><Text >ISBN：9789573245018 </Text></p>
                         <p style={{ marginBottom: '5px' }}><Text>作者：<u>郭城孟</u></Text></p>
                         <p style={{ marginBottom: '5px' }}> <Text>繪者：<u>黃崑謀</u> </Text></p>
@@ -240,6 +241,8 @@ export default class Book extends Component {
                                         avatar={<Avatar src={item.img} />}
                                         title={item.title}
                                         description={item.time}
+                                        
+
                                     />
                                 </List.Item>
                             )}
